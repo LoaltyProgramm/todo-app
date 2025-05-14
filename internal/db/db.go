@@ -49,7 +49,7 @@ func InitDB(cfg *config.Config) error {
 			return fmt.Errorf("error create exec: %w", err)
 		}
 
-		log.Printf("a database with the scheduler table has been created, the path to the database: %w", dbFile)
+		log.Printf("a database with the scheduler table has been created, the path to the database: %v", dbFile)
 	}
 
 	DB, err = sqlx.Open("sqlite", dbFile)
